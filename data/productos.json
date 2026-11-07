@@ -1,0 +1,47 @@
+[
+  {
+    "id": "prod-001",
+    "codigo": "SRV-001",
+    "descripcion": "SERVICIO DE DESARROLLO DE SOFTWARE",
+    "unidad": "ZZ",
+    "precioUnitario": 1500,
+    "tipoAfectacion": "10",
+    "porcentajeIgv": 18
+  },
+  {
+    "id": "prod-002",
+    "codigo": "SRV-002",
+    "descripcion": "CONSULTORÍA EN INFRAESTRUCTURA CLOUD",
+    "unidad": "ZZ",
+    "precioUnitario": 800,
+    "tipoAfectacion": "10",
+    "porcentajeIgv": 18
+  },
+  {
+    "id": "prod-003",
+    "codigo": "PRD-101",
+    "descripcion": "LICENCIA DE SOFTWARE FACTURADOR ERP ANUAL",
+    "unidad": "NIU",
+    "precioUnitario": 350,
+    "tipoAfectacion": "10",
+    "porcentajeIgv": 18
+  },
+  {
+    "id": "prod-004",
+    "codigo": "CUR-201",
+    "descripcion": "CAPACITACIÓN TÉCNICA EN FACTURACIÓN SUNAT",
+    "unidad": "ZZ",
+    "precioUnitario": 250,
+    "tipoAfectacion": "20",
+    "porcentajeIgv": 0
+  },
+  {
+    "id": "prod-005",
+    "codigo": "LIB-301",
+    "descripcion": "MANUAL TÉCNICO UBL 2.1 SUNAT (LIBRO TRIBUTARIO)",
+    "unidad": "NIU",
+    "precioUnitario": 120,
+    "tipoAfectacion": "30",
+    "porcentajeIgv": 0
+  }
+]

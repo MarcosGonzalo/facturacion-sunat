@@ -1,0 +1,38 @@
+[
+  {
+    "id": "cli-001",
+    "tipoDocumento": "6",
+    "numeroDocumento": "20100070970",
+    "razonSocial": "BANCO DE CREDITO DEL PERU",
+    "direccion": "CALLE CENTENARIO 156, LA MOLINA, LIMA",
+    "correo": "contacto@bcp.com.pe",
+    "telefono": "987654321"
+  },
+  {
+    "id": "cli-002",
+    "tipoDocumento": "6",
+    "numeroDocumento": "20504794637",
+    "razonSocial": "PETROLEOS DEL PERU PETROPERU S.A.",
+    "direccion": "AV. ENRIQUE CANAVAL Y MOREYRA 150, SAN ISIDRO",
+    "correo": "comprobantes@petroperu.com.pe",
+    "telefono": "998877665"
+  },
+  {
+    "id": "cli-003",
+    "tipoDocumento": "1",
+    "numeroDocumento": "45678901",
+    "razonSocial": "JUAN CARLOS PÉREZ GÓMEZ",
+    "direccion": "JR. HUANCAVELICA 234, LIMA",
+    "correo": "jcperez@gmail.com",
+    "telefono": "945123456"
+  },
+  {
+    "id": "cli-004",
+    "tipoDocumento": "1",
+    "numeroDocumento": "71234567",
+    "razonSocial": "MARIA ELENA ROJAS BENITEZ",
+    "direccion": "AV. ALFREDO MENDIOLA 1200, LOS OLIVOS",
+    "correo": "mrojas@outlook.com",
+    "telefono": "912345678"
+  }
+]

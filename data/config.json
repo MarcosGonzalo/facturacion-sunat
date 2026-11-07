@@ -1,0 +1,36 @@
+{
+  "emisor": {
+    "ruc": "20000000001",
+    "razonSocial": "SERVICIOS TECNOLOGICOS DEL PERU S.A.C.",
+    "nombreComercial": "SERVITEC PERU",
+    "ubigeo": "150101",
+    "direccion": "AV. JAVIER PRADO ESTE 1234, OF. 501",
+    "departamento": "LIMA",
+    "provincia": "LIMA",
+    "distrito": "SAN ISIDRO",
+    "urbanizacion": "JARDIN",
+    "telefono": "(01) 456-7890",
+    "correo": "facturacion@servitecperu.com"
+  },
+  "sunat": {
+    "solUser": "MODDATOS",
+    "solPass": "moddatos",
+    "endpoint": "https://e-beta.sunat.gob.pe/ol-ti-itcpfegem-beta/billService",
+    "modoSimulacion": false
+  },
+  "certificado": {
+    "path": "C:\\Users\\MARCOS\\Desktop\\facturacion-sunat\\storage\\certificates\\certificado_prueba_20000000001.p12",
+    "fileName": "certificado_prueba_20000000001.p12",
+    "password": "123456",
+    "validoDesde": "2026-11-06T22:31:09.825Z",
+    "validoHasta": "2029-11-06T22:31:09.825Z",
+    "subject": "C=PE, ST=LIMA, L=SAN ISIDRO, O=SERVICIOS TECNOLOGICOS DEL PERU S.A.C., OU=Facturación Electrónica SUNAT, CN=20000000001 - SERVICIOS TECNOLOGICOS DEL PERU S.A.C.",
+    "autoGenerado": true
+  },
+  "series": {
+    "factura": "F001",
+    "correlativoFactura": 3,
+    "boleta": "B001",
+    "correlativoBoleta": 2
+  }
+}

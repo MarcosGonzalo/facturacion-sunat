@@ -1,0 +1,216 @@
+[
+  {
+    "id": "11b3497b-f1d3-4fba-8ac2-b61763621493",
+    "tipoComprobante": "01",
+    "tipoNombre": "Factura Electrónica",
+    "serie": "F001",
+    "correlativo": 1,
+    "numeroCompleto": "F001-00000001",
+    "fechaEmision": "2026-11-06",
+    "horaEmision": "10:30:00",
+    "moneda": "PEN",
+    "emisor": {
+      "ruc": "20000000001",
+      "razonSocial": "SERVICIOS TECNOLOGICOS DEL PERU S.A.C.",
+      "nombreComercial": "SERVITEC PERU",
+      "ubigeo": "150101",
+      "direccion": "AV. JAVIER PRADO ESTE 1234, OF. 501",
+      "departamento": "LIMA",
+      "provincia": "LIMA",
+      "distrito": "SAN ISIDRO",
+      "urbanizacion": "JARDIN",
+      "telefono": "(01) 456-7890",
+      "correo": "facturacion@servitecperu.com"
+    },
+    "cliente": {
+      "tipoDocumento": "6",
+      "numeroDocumento": "20100070970",
+      "razonSocial": "BANCO DE CREDITO DEL PERU",
+      "direccion": "CALLE CENTENARIO 156, LA MOLINA, LIMA"
+    },
+    "items": [
+      {
+        "codigo": "SRV-001",
+        "descripcion": "SERVICIO DE DESARROLLO DE SOFTWARE ERP",
+        "unidad": "ZZ",
+        "cantidad": 1,
+        "precioUnitario": 1180,
+        "valorUnitario": 1000,
+        "precioUnitarioConIgv": 1180,
+        "subtotal": 1000,
+        "igv": 180,
+        "tipoAfectacion": "10"
+      },
+      {
+        "codigo": "LIB-301",
+        "descripcion": "MANUAL TÉCNICO UBL 2.1 SUNAT",
+        "unidad": "NIU",
+        "cantidad": 2,
+        "precioUnitario": 120,
+        "valorUnitario": 120,
+        "precioUnitarioConIgv": 120,
+        "subtotal": 240,
+        "igv": 0,
+        "tipoAfectacion": "30"
+      }
+    ],
+    "totales": {
+      "gravadas": 1000,
+      "exoneradas": 0,
+      "inafectas": 240,
+      "valorVenta": 1240,
+      "igv": 180,
+      "total": 1420
+    },
+    "totalLetras": "SON: UN MIL CUATROCIENTOS VEINTE CON 00/100 SOLES",
+    "digestValue": "mNT89LCRylDEx5P+sGiWBjRRho2tgBrbe6Bjy0wqfPA=",
+    "signatureValue": "vjfBMGGEF/qfD73VqbhYM1gkfjYH+FEo/6NP6CYpLJdsuIFtQVWoXiGHQ/Rbhw5s73LPGW7frwt62R4YnW52yarDYo+mO2vQc2X1KiRAbwln66fzNrc53MCzapPxCqOV3OsQ4Q1xmMCuoLrAio+BhY8zc1ht8SiHbOMqZFQhdWOtEirdNkF94cTkRyE3AUKtdYCERMiqb1FV27NAAWE7/VV9JdSTJc+SLqTbNF02D1uf9PNMDquxujyr2B8GDhAvFts+URny100ZMYVVtXxn6h9CNdyTeRZdx5/g/Mkh3DUtatqsnqiDXYTipCQ71RnsI7f4q1Xn6hqzIQBsCxOY3Q==",
+    "qrText": "20000000001|01|F001|00000001|180.00|1420.00|2026-11-06|6|20100070970|mNT89LCRylDEx5P+sGiWBjRRho2tgBrbe6Bjy0wqfPA=|",
+    "qrDataUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPoAAAD6CAYAAACI7Fo9AAAAAklEQVR4AewaftIAAAqISURBVO3BUY7cypYEwfBE7X/LPvrmOwKYIKtvTyrM8I9U1dFWqup4K1V1vJWqOt5KVR1vpaqO98lfAPnt1DwFZKLmDUDuUjMBskPNU0B2qJkAuVLzBiBPqdkB5LdTc7VSVcdbqarjrVTV8Vaq6ngrVXW8Tzap+WlAfhqQHWp2qLkC8gYgEzXfAmSi5grIRM0b1EyAfIuanwbkrpWqOt5KVR1vpaqOt1JVx1upquN98hIgT6l5A5CJmis1O4BMgEzUTIBcqZkAeQOQKzUTNRMgO4BcqdkBZAeQiZorIBM1bwDylJqnVqrqeCtVdbyVqjreSlUdb6WqjvfJPwTIlZodat6g5ik1O4DcBeQNau4CskPNBMgEyL9qpaqOt1JVx1upquOtVNXxVqrqeJ/8Q9RcAfkmNXcBmajZAeQuIBM1EyDfouanqfkXrFTV8Vaq6ngrVXW8lao63icvUfPbAblSMwGyQ80OIFdqdgCZqLkLyA41O4A8pWYCZKLmt1DzG6xU1fFWqup4K1V1vJWqOt5KVR3vk01A/r9ScwVkomYCZAeQiZorIBM1bwBypWYCZKJmAmSi5grIRM0EyETNBMhEzRWQiZodQH6zlao63kpVHW+lqo63UlXHW6mq4+EfOQyQiZq7gEzUvAHIlZo3AHlKzQ4gEzV3AZmo2QHkKTUnWamq461U1fFWqup4K1V1vJWqOt4nfwFkomYC5KepmaiZAHkKyETNtwDZoWYC5KcBuVLzBiBPqdkB5KepeWqlqo63UlXHW6mq461U1fFWqup4n7xEzQ4gV2p+mpo3ANmh5ik1EyATNT9NzbeomQCZqHlKzQTIb7ZSVcdbqarjrVTV8Vaq6nifvATIRM1TQCZqJkC+BchPU7NDzV1AdqjZAeRKzW8HZKJmomYC5ErNG4BM1FytVNXxVqrqeCtVdbyVqjreSlUd75P/iJq71OxQcxeQiZqfBmSiZgJkomYC5KepuUvNBMhEzQ4gP03NXUB2qLlrpaqOt1JVx1upquOtVNXxVqrqePhHNgB5g5q7gEzU7ABypWYCZKJmB5C71OwA8pSaNwC5S80EyETNBMgONU8B2aHmN1ipquOtVNXxVqrqeCtVdbyVqjoe/pEBkImaCZCn1LwByETNU0Amar4FyETNBMhPU3MXkImaCZAdau4CMlHzBiBXanYAmai5a6WqjrdSVcdbqarjrVTV8Vaq6nifbAIyUTMBcheQHWp2ALlLzUTNBMhTat6g5i4gEzUTIBMgEzV3AZmo2QHkLjUTIBM1EyC/2UpVHW+lqo63UlXHW6mq461U1fE+2aTmDWq+Rc1TQN6gZgLkKSA71DylZgJkAuRKzX9BzVNAJmomQJ5S89RKVR1vpaqOt1JVx1upquN98hdqJkB2qHkKyETNBMhdat6gZoeaKyATNd+iZgJkouYpIBM1O4BM1EyA/AZAvknN1UpVHW+lqo63UlXHW6mq461U1fHwj/wSQCZqdgCZqLkCMlEzAfIGNXcBmaiZAHlKzQ4gEzVXQHao+WlAJmp2ALlS8wYgEzVXK1V1vJWqOt5KVR1vpaqOt1JVx/vkJUAmap4CskPNBMiVmgmQiZoJkKeATNRMgOxQ8xSQb1HzTUCu1EzU/BZAJmruWqmq461U1fFWqup4K1V1vJWqOt4nm4BM1HyLmm8B8l8AcqXmm4BcqdmhZgJkAuRKzQTIRM0EyLcAmaj5LYBM1FytVNXxVqrqeCtVdbyVqjreSlUd75NNat4A5ErNBMgONRM1TwGZqJkAmaj5FjUTIFdA3qDmLiATNRMgO9RMgHwLkKeATNRMgNy1UlXHW6mq461U1fFWqup4+EdeAGSiZgLkLjUTIBM1dwF5g5qngHyTmisgEzUTIN+iZgeQp9TsALJDzRWQiZoJkImau1aq6ngrVXW8lao63kpVHW+lqo73yV8AmajZAeQuNRMg36JmB5AJkB1q7lIzATJR8y1qdgC5C8hEzQ41P03NBMiVmh1qJkAmaq5Wqup4K1V1vJWqOt5KVR1vpaqO98kvAmSiZgJkAuQuNRMg3wTkpwH5FiBPqfktgEzUTIA8BeRbVqrqeCtVdbyVqjreSlUdb6WqjvfJS9TsAHKlZgJkomYC5C4gEzU7gEzUTIBcqZkA2QHkt1BzF5CJmomaCZCJmrvUTIBM1EyAfIuau1aq6ngrVXW8lao63kpVHW+lqo73yV+omQCZqPkWNTvUTIDcBWSiZqJmAmSi5i41O4A8BWSipv4XkImau9RMgDy1UlXHW6mq461U1fFWqup4n2xSMwEyUTNRcxeQN6i5C8gOIDuA3KVmAmSiZgLkLjVvAPJbALlLzQ41EyBXat4AZKLmaqWqjrdSVcdbqarjrVTV8Vaq6nif/AWQiZqJmh1A7lLzBiB3qZkAqf+l5luATNR8C5A3qPkNVqrqeCtVdbyVqjreSlUdb6WqjvfJS4A8pWYCZKJmAmSi5rdQcwVkAmQHkImabwFyl5oJkImaCZCJmgmQKzVvADJR85SaCZC7VqrqeCtVdbyVqjreSlUdb6WqjvfJJiATNU8BmaiZAJmoeQrIG9Q8pWYCZKLmKSA71HwLkImap4C8Qc0EyJWaHUAmau5aqarjrVTV8Vaq6ngrVXW8lao63ieb1EyA7FBzF5CJmh1AnlKzA8hEzV1AdgCZqLlLzQ4gd6mZqHkDkLvUTIBM1Pw0NRMgEzVXK1V1vJWqOt5KVR1vpaqOt1JVx/vkJWomQCZArtTsALJDzbcAmaiZAPkWNd8C5FuA7FCzQ80VkImaHUAmaq6ATNRMgEzU3LVSVcdbqarjrVTV8Vaq6nifvATIRM0EyF1AJmp2ALlSswPIRM0EyETNXUDeAORKzQ41EyATNVdA3gBkouYpIG8AcheQiZoJkImaq5WqOt5KVR1vpaqOt1JVx1upquN98hdqdqjZoeYuNTuA3AVkh5odauoZNW8AcpeaNwB5CshTK1V1vJWqOt5KVR1vpaqOt1JVx/vkL4D8dmomap4CMgEyUTMB8i1qdqi5AvJbqPkmNVdAdgCZqLlLzQ4gEzV3rVTV8Vaq6ngrVXW8lao63kpVHe+TTWp+GpAdQCZqroC8AcgONXcBmQCZqLlLzRuATIBcqXkDkJ+m5ikgEzXfslJVx1upquOtVNXxVqrqeCtVdbxPXgLkKTU/Tc0EyETNDiATIFdqJmreAORKzQ4gEzUTIFdA3qBmB5C7gJxkpaqOt1JVx1upquOtVNXxPvmHALlSM1GzA8hEzQTIFZCJmgmQp4BM1OwAMlFzBWSiZgeQHWruAjJRswPIb7BSVcdbqarjrVTV8Vaq6ngrVXW8T+qrgEzUPKXmKSATIBM1O4BcqZkAmaiZqJkAuQvIDiATNXep+WkrVXW8lao63kpVHW+lqo63UlXH++Qlan4LNRMgTwHZoeYpIBM1EyBPqXmDmqeAvAHIU2q+BchEzVMrVXW8lao63kpVHW+lqo63UlXH+2QTkN8OyFNAJmp2APlpaiZAngKyQ81dan4LIBMgEzXfAmSi5q6VqjreSlUdb6WqjrdSVcdbqarj4R+pqqOtVNXxVqrqeCtVdbyVqjre/wFnQ7Y7611NggAAAABJRU5ErkJggg==",
+    "fileName": "20000000001-01-F001-00000001.xml",
+    "zipFileName": "20000000001-01-F001-00000001.zip",
+    "estadoSunat": "ACEPTADO",
+    "codigoRespuestaSunat": "0",
+    "descripcionSunat": "La Factura número F001-00000001, ha sido aceptada satisfactoriamente (Ambiente Homologación/Beta)",
+    "notasSunat": [
+      "El comprobante cumple con las especificaciones UBL 2.1 y firma electrónica de SUNAT."
+    ],
+    "esSimulado": true,
+    "createdAt": "2026-11-06T22:31:10.022Z"
+  },
+  {
+    "id": "9b0be169-16f8-41f7-bee9-0888dc680e8e",
+    "tipoComprobante": "03",
+    "tipoNombre": "Boleta de Venta Electrónica",
+    "serie": "B001",
+    "correlativo": 1,
+    "numeroCompleto": "B001-00000001",
+    "fechaEmision": "2026-11-06",
+    "horaEmision": "11:15:00",
+    "moneda": "PEN",
+    "emisor": {
+      "ruc": "20000000001",
+      "razonSocial": "SERVICIOS TECNOLOGICOS DEL PERU S.A.C.",
+      "nombreComercial": "SERVITEC PERU",
+      "ubigeo": "150101",
+      "direccion": "AV. JAVIER PRADO ESTE 1234, OF. 501",
+      "departamento": "LIMA",
+      "provincia": "LIMA",
+      "distrito": "SAN ISIDRO",
+      "urbanizacion": "JARDIN",
+      "telefono": "(01) 456-7890",
+      "correo": "facturacion@servitecperu.com"
+    },
+    "cliente": {
+      "tipoDocumento": "1",
+      "numeroDocumento": "45678901",
+      "razonSocial": "JUAN CARLOS PÉREZ GÓMEZ",
+      "direccion": "JR. HUANCAVELICA 234, LIMA"
+    },
+    "items": [
+      {
+        "codigo": "PRD-101",
+        "descripcion": "LICENCIA DE SOFTWARE FACTURADOR ERP ANUAL",
+        "unidad": "NIU",
+        "cantidad": 1,
+        "precioUnitario": 354,
+        "valorUnitario": 300,
+        "precioUnitarioConIgv": 354,
+        "subtotal": 300,
+        "igv": 54,
+        "tipoAfectacion": "10"
+      }
+    ],
+    "totales": {
+      "gravadas": 300,
+      "exoneradas": 0,
+      "inafectas": 0,
+      "valorVenta": 300,
+      "igv": 54,
+      "total": 354
+    },
+    "totalLetras": "SON: TRESCIENTOS CINCUENTA Y CUATRO CON 00/100 SOLES",
+    "digestValue": "GvzERikisSwcjsTkGUIYLh2hQUjS+3kGt6vpSAgMjYM=",
+    "signatureValue": "I+Am2YaFcb6ZbiYTA1cIIiwPzAtT1lUmC1nEC90HwZSr/zvBiNktjorgDCrZTmplvWuKMRoWvAuDpsNM3nlhha5c+NOLf5bthZyOob1NfPkfbIBrHj0B+LmmJxZ2ZbR5DW90DqM+g7TC+PyUF8MJLPLX5iV6LyI795qlwKPF8XRx7TmLmz6161GNTL4PuRVfWztjZHNI4NlC+lkwN7VVhlO0N3UC4gRFkfqfRHsftvCfiFxDIiw8HxTtiP7bgTbiA91oAsHGd+5xetvoXpl29pOAzRVZ2o7Ul7RrrqYKlBPXN5D0vHbDEyKMFcBAKA560lgYB2plJTeWK8S/AmHz7Q==",
+    "qrText": "20000000001|03|B001|00000001|54.00|354.00|2026-11-06|1|45678901|GvzERikisSwcjsTkGUIYLh2hQUjS+3kGt6vpSAgMjYM=|",
+    "qrDataUrl": "data:image/png;base64,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",
+    "fileName": "20000000001-03-B001-00000001.xml",
+    "zipFileName": "20000000001-03-B001-00000001.zip",
+    "estadoSunat": "ACEPTADO",
+    "codigoRespuestaSunat": "0",
+    "descripcionSunat": "La Boleta número B001-00000001, ha sido aceptada satisfactoriamente (Ambiente Homologación/Beta)",
+    "notasSunat": [
+      "El comprobante cumple con las especificaciones UBL 2.1."
+    ],
+    "esSimulado": true,
+    "createdAt": "2026-11-06T22:31:10.053Z"
+  },
+  {
+    "id": "af45b75f-170d-4859-b5bd-37c876d13314",
+    "tipoComprobante": "01",
+    "tipoNombre": "Factura Electrónica",
+    "serie": "F001",
+    "correlativo": 2,
+    "numeroCompleto": "F001-00000002",
+    "fechaEmision": "2026-11-06",
+    "horaEmision": "18:25:14",
+    "moneda": "PEN",
+    "emisor": {
+      "ruc": "20000000001",
+      "razonSocial": "SERVICIOS TECNOLOGICOS DEL PERU S.A.C.",
+      "nombreComercial": "SERVITEC PERU",
+      "ubigeo": "150101",
+      "direccion": "AV. JAVIER PRADO ESTE 1234, OF. 501",
+      "departamento": "LIMA",
+      "provincia": "LIMA",
+      "distrito": "SAN ISIDRO",
+      "urbanizacion": "JARDIN",
+      "telefono": "(01) 456-7890",
+      "correo": "facturacion@servitecperu.com"
+    },
+    "cliente": {
+      "id": "cli-002",
+      "tipoDocumento": "6",
+      "numeroDocumento": "20504794637",
+      "razonSocial": "PETROLEOS DEL PERU PETROPERU S.A.",
+      "direccion": "AV. ENRIQUE CANAVAL Y MOREYRA 150, SAN ISIDRO",
+      "correo": "comprobantes@petroperu.com.pe",
+      "telefono": "998877665"
+    },
+    "items": [
+      {
+        "codigo": "SRV-001",
+        "descripcion": "pc",
+        "unidad": "ZZ",
+        "cantidad": 1,
+        "precioUnitario": 2500,
+        "tipoAfectacion": "10",
+        "valorUnitario": 2118.64,
+        "precioUnitarioConIgv": 2500,
+        "subtotal": 2118.64,
+        "igv": 381.36
+      }
+    ],
+    "totales": {
+      "gravadas": 2118.64,
+      "exoneradas": 0,
+      "inafectas": 0,
+      "valorVenta": 2118.64,
+      "igv": 381.36,
+      "total": 2500
+    },
+    "totalLetras": "SON: DOS MIL QUINIENTOS CON 00/100 SOLES",
+    "digestValue": "2moVLS1/F9cvXNrxf69CAKBM4VI6XcLXSpoJpFN8XuU=",
+    "signatureValue": "SEY0ryfocSuqWFQ7JusEgPGUnO1TMvzAm3A00fPFKU+rRKm7mMeT4EIs7GwCHj0COH3NgG3dAhcrLbKu9xTLPXuWnCOPTRqB9hjqcXdAnpo64Ret0+2d67VNcMP9n/mkRgHBYDT1qRskGZgnxgAweAm54yi5yuEyXhd3487XmgF+PTH4OzODaHiOXrf5GeqSx2JshJhAGKMTxJ3B3QpIeEc0Ax0pVXzeLzPZCllkQoMgbctp509I3wBmTtOl7c6lBkGdjApw9+6AfXJV2FZe++0QHz+hywKf+raL6q48YQJpb2D2uI84rk9GUtQJnoU1TOYwvM5rBPwt01EVE1XLEg==",
+    "qrText": "20000000001|01|F001|00000002|381.36|2500.00|2026-11-06|6|20504794637|2moVLS1/F9cvXNrxf69CAKBM4VI6XcLXSpoJpFN8XuU=|",
+    "qrDataUrl": "data:image/png;base64,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",
+    "fileName": "20000000001-01-F001-00000002.xml",
+    "zipFileName": "20000000001-01-F001-00000002.zip",
+    "estadoSunat": "ACEPTADO",
+    "codigoRespuestaSunat": "0",
+    "descripcionSunat": "La Factura numero F001-00000002, ha sido aceptada",
+    "notasSunat": [],
+    "esSimulado": false,
+    "createdAt": "2026-11-06T23:25:14.321Z"
+  }
+]

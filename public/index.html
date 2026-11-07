@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full bg-slate-50">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facturador SUNAT UBL 2.1 | Cliente de Facturación Electrónica</title>
+
+  <!-- Tailwind CSS & FontAwesome -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/custom.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="h-full flex flex-col font-sans text-slate-800 antialiased selection:bg-indigo-500 selection:text-white">
+
+  <!-- BARRA DE NAVEGACIÓN SUPERIOR -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-30 shadow-xs no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo e Identidad -->
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-700 to-indigo-500 flex items-center justify-center text-white shadow-md shadow-indigo-500/20">
+            <i class="fa-solid fa-file-invoice text-lg"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-base font-black tracking-tight text-slate-900">SUNAT Facturador</span>
+              <span class="px-2 py-0.5 text-[10px] font-extrabold uppercase tracking-wider bg-indigo-100 text-indigo-700 rounded-full">UBL 2.1</span>
+            </div>
+            <p class="text-[11px] text-slate-400 font-medium">Cliente de Emisión, Firma Digital y Envío SOAP</p>
+          </div>
+        </div>
+
+        <!-- Pestañas de Navegación -->
+        <nav class="hidden lg:flex items-center gap-1">
+          <button class="nav-tab-btn" data-tab="dashboard">
+            <i class="fa-solid fa-chart-pie"></i> Dashboard
+          </button>
+          <button class="nav-tab-btn" data-tab="emision">
+            <i class="fa-solid fa-paper-plane"></i> Emitir Comprobante
+          </button>
+          <button class="nav-tab-btn" data-tab="comprobantes">
+            <i class="fa-solid fa-list-check"></i> Comprobantes
+          </button>
+          <button class="nav-tab-btn" data-tab="clientes">
+            <i class="fa-solid fa-users"></i> Clientes
+          </button>
+          <button class="nav-tab-btn" data-tab="productos">
+            <i class="fa-solid fa-boxes-stacked"></i> Catálogo
+          </button>
+          <button class="nav-tab-btn" data-tab="validador">
+            <i class="fa-solid fa-vial-circle-check"></i> Validador XML
+          </button>
+          <button class="nav-tab-btn" data-tab="config">
+            <i class="fa-solid fa-gear"></i> Configuración
+          </button>
+        </nav>
+
+        <!-- Indicador de Entorno SUNAT -->
+        <div class="flex items-center gap-3">
+          <div class="text-right hidden sm:block">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">Entorno Activo</span>
+            <span class="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Beta / Homologación
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra de pestañas móvil / tablet -->
+      <div class="flex lg:hidden overflow-x-auto py-2 gap-1 border-t border-slate-100">
+        <button class="nav-tab-btn whitespace-nowrap text-xs px-2.5 py-1.5" data-tab="dashboard">
+          <i class="fa-solid fa-chart-pie"></i> Dashboard
+        </button>
+        <button class="nav-tab-btn whitespace-nowrap text-xs px-2.5 py-1.5" data-tab="emision">
+          <i class="fa-solid fa-paper-plane"></i> Emitir
+        </button>
+        <button class="nav-tab-btn whitespace-nowrap text-xs px-2.5 py-1.5" data-tab="comprobantes">
+          <i class="fa-solid fa-list-check"></i> Comprobantes
+        </button>
+        <button class="nav-tab-btn whitespace-nowrap text-xs px-2.5 py-1.5" data-tab="clientes">
+          <i class="fa-solid fa-users"></i> Clientes
+        </button>
+        <button class="nav-tab-btn whitespace-nowrap text-xs px-2.5 py-1.5" data-tab="productos">
+          <i class="fa-solid fa-boxes-stacked"></i> Catálogo
+        </button>
+        <button class="nav-tab-btn whitespace-nowrap text-xs px-2.5 py-1.5" data-tab="validador">
+          <i class="fa-solid fa-vial-circle-check"></i> Validador
+        </button>
+        <button class="nav-tab-btn whitespace-nowrap text-xs px-2.5 py-1.5" data-tab="config">
+          <i class="fa-solid fa-gear"></i> Config
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL (SPA CONTAINER) -->
+  <main class="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 lg:p-8 no-print">
+    <!-- Vista Dashboard -->
+    <section id="dashboard-view" class="view-pane"></section>
+
+    <!-- Vista Emisión -->
+    <section id="emision-view" class="view-pane hidden"></section>
+
+    <!-- Vista Comprobantes -->
+    <section id="comprobantes-view" class="view-pane hidden"></section>
+
+    <!-- Vista Clientes -->
+    <section id="clientes-view" class="view-pane hidden"></section>
+
+    <!-- Vista Catálogo de Productos -->
+    <section id="productos-view" class="view-pane hidden"></section>
+
+    <!-- Vista Validador XML -->
+    <section id="validador-view" class="view-pane hidden"></section>
+
+    <!-- Vista Configuración -->
+    <section id="config-view" class="view-pane hidden"></section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-slate-200 py-4 text-center text-xs text-slate-400 no-print">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <p>Trabajo Práctico: Aplicación Cliente de Facturación Electrónica con Integración SUNAT (UBL 2.1)</p>
+      <p class="font-mono text-[11px] text-slate-500">Versión 1.0.0 | Entorno Homologación / Beta Oficial</p>
+    </div>
+  </footer>
+
+  <!-- CONTENEDOR DE TOAST NOTIFICATIONS -->
+  <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col items-end pointer-events-none"></div>
+
+  <!-- MODAL: VISOR DE REPRESENTACIÓN IMPRESA (A4 / TICKET 80MM) -->
+  <div id="visor-modal" class="fixed inset-0 z-50 overflow-y-auto hidden bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="relative bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[92vh] flex flex-col overflow-hidden">
+      <!-- Encabezado Modal Visor -->
+      <div class="p-4 border-b border-slate-200 flex items-center justify-between bg-slate-50 no-print">
+        <div class="flex items-center gap-3">
+          <span class="font-bold text-sm text-slate-800">Representación Impresa Electrónica</span>
+          <!-- Selector Formato -->
+          <div class="flex items-center bg-white border border-slate-200 p-0.5 rounded-lg">
+            <button id="visor-btn-a4" onclick="setVisorFormat('a4')" class="px-3 py-1.5 text-xs font-bold rounded-lg bg-indigo-600 text-white">
+              <i class="fa-solid fa-file-lines mr-1"></i> Formato A4
+            </button>
+            <button id="visor-btn-ticket" onclick="setVisorFormat('ticket')" class="px-3 py-1.5 text-xs font-bold rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200">
+              <i class="fa-solid fa-receipt mr-1"></i> Ticket 80mm
+            </button>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <a id="visor-btn-download-pdf" href="#" target="_blank" download class="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-lg transition-colors flex items-center gap-1.5 shadow-sm">
+            <i class="fa-solid fa-file-pdf"></i> Descargar PDF Oficial
+          </a>
+          <button onclick="triggerPrint()" class="px-3.5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold rounded-lg transition-colors flex items-center gap-1.5 shadow-sm">
+            <i class="fa-solid fa-print"></i> Imprimir
+          </button>
+          <button onclick="closeAllModals()" class="p-2 text-slate-400 hover:text-slate-600 rounded-lg">
+            <i class="fa-solid fa-xmark text-lg"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Contenido Imprimible -->
+      <div class="p-6 overflow-y-auto flex-1 bg-slate-100" id="print-area">
+        <!-- Renderizado dinámico de A4 o Ticket -->
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: TRAZABILIDAD & RESPUESTA SUNAT -->
+  <div id="trace-modal" class="fixed inset-0 z-50 overflow-y-auto hidden bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] flex flex-col overflow-hidden">
+      <div class="p-4 border-b border-slate-200 flex items-center justify-between bg-slate-50">
+        <h3 class="font-bold text-sm text-slate-800 flex items-center gap-2">
+          <i class="fa-solid fa-shield-halved text-emerald-600"></i> Detalle de Trazabilidad & Constancia SUNAT (CDR)
+        </h3>
+        <button onclick="closeAllModals()" class="p-1.5 text-slate-400 hover:text-slate-600 rounded-lg">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="p-6 overflow-y-auto flex-1" id="trace-modal-content"></div>
+    </div>
+  </div>
+
+  <!-- MODAL: NUEVO CLIENTE -->
+  <div id="cliente-modal" class="fixed inset-0 z-50 overflow-y-auto hidden bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="relative bg-white rounded-2xl shadow-2xl max-w-lg w-full overflow-hidden">
+      <div class="p-4 border-b border-slate-200 flex items-center justify-between bg-slate-50">
+        <h3 class="font-bold text-sm text-slate-800 flex items-center gap-2">
+          <i class="fa-solid fa-user-plus text-indigo-600"></i> Registrar Nuevo Cliente
+        </h3>
+        <button onclick="closeAllModals()" class="p-1.5 text-slate-400 hover:text-slate-600 rounded-lg">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <form onsubmit="guardarNuevoCliente(event)" class="p-6 space-y-4 text-xs">
+        <div class="grid grid-cols-3 gap-3">
+          <div>
+            <label class="block font-semibold text-slate-600 mb-1">Tipo Doc *</label>
+            <select id="modal-cli-tipo" onchange="validarDocumentoClienteInput()" class="w-full px-2.5 py-2 border border-slate-200 rounded-lg">
+              <option value="6">RUC (6)</option>
+              <option value="1">DNI (1)</option>
+              <option value="4">C.E. (4)</option>
+              <option value="7">Pasaporte (7)</option>
+            </select>
+          </div>
+          <div class="col-span-2">
+            <label class="block font-semibold text-slate-600 mb-1">N° Documento *</label>
+            <input type="text" id="modal-cli-num" oninput="validarDocumentoClienteInput()" placeholder="Ej. 20100070970 o 45678901" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-mono font-bold">
+          </div>
+        </div>
+
+        <div id="modal-cli-status" class="text-[11px]"></div>
+
+        <div>
+          <label class="block font-semibold text-slate-600 mb-1">Razón Social / Nombres y Apellidos *</label>
+          <input type="text" id="modal-cli-razon" required placeholder="Nombre completo o razón social oficial" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold uppercase">
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-600 mb-1">Dirección Fiscal / Domicilio</label>
+          <input type="text" id="modal-cli-dir" placeholder="Av. / Calle / Jr. / Distrito" class="w-full px-3 py-2 border border-slate-200 rounded-lg uppercase">
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-semibold text-slate-600 mb-1">Correo Electrónico</label>
+            <input type="email" id="modal-cli-correo" placeholder="cliente@correo.com" class="w-full px-3 py-2 border border-slate-200 rounded-lg">
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-600 mb-1">Teléfono / Celular</label>
+            <input type="text" id="modal-cli-tel" placeholder="987654321" class="w-full px-3 py-2 border border-slate-200 rounded-lg">
+          </div>
+        </div>
+
+        <div class="pt-4 flex justify-end gap-2 border-t border-slate-100">
+          <button type="button" onclick="closeAllModals()" class="px-4 py-2 border border-slate-200 rounded-lg text-slate-600 hover:bg-slate-50 font-semibold">
+            Cancelar
+          </button>
+          <button type="submit" class="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-bold shadow-sm">
+            Guardar Cliente
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: NUEVO PRODUCTO -->
+  <div id="producto-modal" class="fixed inset-0 z-50 overflow-y-auto hidden bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="relative bg-white rounded-2xl shadow-2xl max-w-lg w-full overflow-hidden">
+      <div class="p-4 border-b border-slate-200 flex items-center justify-between bg-slate-50">
+        <h3 class="font-bold text-sm text-slate-800 flex items-center gap-2">
+          <i class="fa-solid fa-box text-indigo-600"></i> Registrar Ítem en Catálogo
+        </h3>
+        <button onclick="closeAllModals()" class="p-1.5 text-slate-400 hover:text-slate-600 rounded-lg">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <form onsubmit="guardarNuevoProducto(event)" class="p-6 space-y-4 text-xs">
+        <div class="grid grid-cols-3 gap-3">
+          <div>
+            <label class="block font-semibold text-slate-600 mb-1">Código Interno *</label>
+            <input type="text" id="modal-prod-codigo" required placeholder="PROD-001" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-mono font-bold uppercase">
+          </div>
+          <div class="col-span-2">
+            <label class="block font-semibold text-slate-600 mb-1">Unidad de Medida (Cat. 03) *</label>
+            <select id="modal-prod-unidad" class="w-full px-2.5 py-2 border border-slate-200 rounded-lg">
+              <option value="NIU">NIU - Unidades</option>
+              <option value="ZZ">ZZ - Servicios</option>
+              <option value="BX">BX - Cajas</option>
+              <option value="KGM">KGM - Kilogramos</option>
+              <option value="MTR">MTR - Metros</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-600 mb-1">Descripción del Producto o Servicio *</label>
+          <input type="text" id="modal-prod-desc" required placeholder="Ej. CONSULTORÍA DE SISTEMAS" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold uppercase">
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-semibold text-slate-600 mb-1">Precio Unitario (c/IGV) *</label>
+            <div class="relative">
+              <span class="absolute left-3 top-2 text-slate-400 font-bold">S/</span>
+              <input type="number" step="0.01" min="0" id="modal-prod-precio" required placeholder="100.00" class="w-full pl-8 pr-3 py-2 border border-slate-200 rounded-lg font-mono font-bold">
+            </div>
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-600 mb-1">Afectación al IGV (Cat. 07) *</label>
+            <select id="modal-prod-afec" class="w-full px-2.5 py-2 border border-slate-200 rounded-lg">
+              <option value="10">10 - Gravado (18% IGV)</option>
+              <option value="20">20 - Exonerado (0%)</option>
+              <option value="30">30 - Inafecto (0%)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="pt-4 flex justify-end gap-2 border-t border-slate-100">
+          <button type="button" onclick="closeAllModals()" class="px-4 py-2 border border-slate-200 rounded-lg text-slate-600 hover:bg-slate-50 font-semibold">
+            Cancelar
+          </button>
+          <button type="submit" class="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-bold shadow-sm">
+            Guardar Ítem
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: PREVIEW XML -->
+  <div id="xml-preview-modal" class="fixed inset-0 z-50 overflow-y-auto hidden bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="relative bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[85vh] flex flex-col overflow-hidden">
+      <div class="p-4 border-b border-slate-200 flex items-center justify-between bg-slate-50">
+        <h3 class="font-bold text-sm text-slate-800 flex items-center gap-2">
+          <i class="fa-solid fa-code text-indigo-600"></i> Borrador XML UBL 2.1
+        </h3>
+        <button onclick="closeAllModals()" class="p-1.5 text-slate-400 hover:text-slate-600 rounded-lg">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="p-4 overflow-y-auto flex-1 bg-slate-900">
+        <pre id="xml-preview-code" class="text-xs text-emerald-400 font-mono whitespace-pre-wrap"></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="js/utils.js"></script>
+  <script src="js/components/dashboard.js"></script>
+  <script src="js/components/emision.js"></script>
+  <script src="js/components/comprobantes.js"></script>
+  <script src="js/components/clientes.js"></script>
+  <script src="js/components/productos.js"></script>
+  <script src="js/components/config.js"></script>
+  <script src="js/components/visor.js"></script>
+  <script src="js/components/validador.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

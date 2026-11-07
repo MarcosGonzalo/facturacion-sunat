@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ext:UBLExtensions>
+    <ext:UBLExtension>
+      <ext:ExtensionContent>
+      <ds:Signature Id="Sign-SUNAT" xmlns:ds="http://www.w3.org/2000/09/xmldsig#"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference URI=""><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>2moVLS1/F9cvXNrxf69CAKBM4VI6XcLXSpoJpFN8XuU=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>SEY0ryfocSuqWFQ7JusEgPGUnO1TMvzAm3A00fPFKU+rRKm7mMeT4EIs7GwCHj0COH3NgG3dAhcrLbKu9xTLPXuWnCOPTRqB9hjqcXdAnpo64Ret0+2d67VNcMP9n/mkRgHBYDT1qRskGZgnxgAweAm54yi5yuEyXhd3487XmgF+PTH4OzODaHiOXrf5GeqSx2JshJhAGKMTxJ3B3QpIeEc0Ax0pVXzeLzPZCllkQoMgbctp509I3wBmTtOl7c6lBkGdjApw9+6AfXJV2FZe++0QHz+hywKf+raL6q48YQJpb2D2uI84rk9GUtQJnoU1TOYwvM5rBPwt01EVE1XLEg==</ds:SignatureValue><ds:KeyInfo><ds:X509Data><ds:X509Certificate>MIIDxzCCAq+gAwIBAgIHEXlABCeDADANBgkqhkiG9w0BAQsFADCBozELMAkGA1UEBhMCUEUxDTALBgNVBAgTBExJTUExEzARBgNVBAcTClNBTiBJU0lEUk8xHDAaBgNVBAoTE0VNUFJFU0EgREVNTyBTLkEuQy4xJjAkBgNVBAsTHUZhY3R1cmFjafNuIEVsZWN0cvNuaWNhIFNVTkFUMSowKAYDVQQDEyEyMDAwMDAwMDAwMSAtIEVNUFJFU0EgREVNTyBTLkEuQy4wHhcNMjYxMTA2MjIzMTE4WhcNMjkxMTA2MjIzMTE4WjCBozELMAkGA1UEBhMCUEUxDTALBgNVBAgTBExJTUExEzARBgNVBAcTClNBTiBJU0lEUk8xHDAaBgNVBAoTE0VNUFJFU0EgREVNTyBTLkEuQy4xJjAkBgNVBAsTHUZhY3R1cmFjafNuIEVsZWN0cvNuaWNhIFNVTkFUMSowKAYDVQQDEyEyMDAwMDAwMDAwMSAtIEVNUFJFU0EgREVNTyBTLkEuQy4wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCUkXKS8WBnRbMBzF7PhfK7UtuJu1YkaEA1CLLNKS9qIVE3X+QU28Io1j0+/HkP5tOZydqk4dFtpEJhYh+1dnT0x+JDl0QiSWUMXqlX9vejMywgAicu7swvVMttYJIbYlYSDDsYmBPbwM9a7NNSU+mL5g2rJR8o7FayKvq12Mfa9uVRsN/5Ly7d1nrA3u5QdBAL7kO4JSQ7BmBWrKTqh/B1M7erQJBm9J2ayN74+RCmxCTxTaKBL63tsHiV/2UX7+BEpQu1Ou5/CqLf1LmcgkuC/ybL0lzq3dIdMix/+hGEuP5JQu6I6pB3SgjTB6XZ6emCDQWEKpTGO0ivPbD+Dq6DAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAEDus/rYyqBeReMLMAWEunwFAklTlnjTH4QNRyk00I6loppivzHzb0t9j8A8axFL6ADwSpOa0JT7wzaOmbCich/OZQOpfUdTqQX5zOM2r1z1frCItdUYH6Hx+VcgWIHtu8u/yk0CIOfh/pR5kZ2V2N2cRsvxdntjr7c3lXtjbq0MF7qUGpyVek5PFYjtby63T0m9Z8sNs08ubzFDDXZ/gcung5xNcho8ZRX3TysuH7AY4+wPqTdwM6Y/fjKEKMkWGCfvfDd6zly7NzF2PZ05sgPVFhbJ89XyivDn3xq8VznAyTjWF2el8ABUJdOzedg+XoGXRAMoN8X1ainY3CGStQQ=</ds:X509Certificate></ds:X509Data></ds:KeyInfo></ds:Signature></ext:ExtensionContent>
+    </ext:UBLExtension>
+  </ext:UBLExtensions>
+  <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+  <cbc:CustomizationID schemeAgencyName="PE:SUNAT">2.0</cbc:CustomizationID>
+  <cbc:ID>F001-00000002</cbc:ID>
+  <cbc:IssueDate>2026-11-06</cbc:IssueDate>
+  <cbc:IssueTime>18:25:14</cbc:IssueTime>
+  <cbc:InvoiceTypeCode listAgencyName="PE:SUNAT" listName="Tipo de Documento" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo01" listID="0101" name="Tipo de Operacion">01</cbc:InvoiceTypeCode>
+  <cbc:Note languageLocaleID="1000"><![CDATA[SON: DOS MIL QUINIENTOS CON 00/100 SOLES]]></cbc:Note>
+  <cbc:DocumentCurrencyCode listAgencyName="United Nations Economic Commission for Europe" listID="ISO 4217 Alpha" listName="Currency">PEN</cbc:DocumentCurrencyCode>
+  <cac:Signature>
+    <cbc:ID>20000000001</cbc:ID>
+    <cac:SignatoryParty>
+      <cac:PartyIdentification>
+        <cbc:ID>20000000001</cbc:ID>
+      </cac:PartyIdentification>
+      <cac:PartyName>
+        <cbc:Name><![CDATA[SERVICIOS TECNOLOGICOS DEL PERU S.A.C.]]></cbc:Name>
+      </cac:PartyName>
+    </cac:SignatoryParty>
+    <cac:DigitalSignatureAttachment>
+      <cac:ExternalReference>
+        <cbc:URI>#Sign-SUNAT</cbc:URI>
+      </cac:ExternalReference>
+    </cac:DigitalSignatureAttachment>
+  </cac:Signature>
+  <cac:AccountingSupplierParty>
+    <cac:Party>
+      <cac:PartyIdentification>
+        <cbc:ID schemeAgencyName="PE:SUNAT" schemeID="6" schemeName="Documento de Identidad" schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo06">20000000001</cbc:ID>
+      </cac:PartyIdentification>
+      <cac:PartyName>
+        <cbc:Name><![CDATA[SERVITEC PERU]]></cbc:Name>
+      </cac:PartyName>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName><![CDATA[SERVICIOS TECNOLOGICOS DEL PERU S.A.C.]]></cbc:RegistrationName>
+        <cac:RegistrationAddress>
+          <cbc:ID schemeAgencyName="PE:INEI" schemeName="Ubigeos">150101</cbc:ID>
+          <cbc:AddressTypeCode listAgencyName="PE:SUNAT" listName="Establecimientos anexos">0000</cbc:AddressTypeCode>
+          <cbc:CitySubdivisionName><![CDATA[JARDIN]]></cbc:CitySubdivisionName>
+          <cbc:CityName><![CDATA[LIMA]]></cbc:CityName>
+          <cbc:CountrySubentity><![CDATA[LIMA]]></cbc:CountrySubentity>
+          <cbc:District><![CDATA[SAN ISIDRO]]></cbc:District>
+          <cac:AddressLine>
+            <cbc:Line><![CDATA[AV. JAVIER PRADO ESTE 1234, OF. 501]]></cbc:Line>
+          </cac:AddressLine>
+          <cac:Country>
+            <cbc:IdentificationCode listAgencyName="United Nations Economic Commission for Europe" listID="ISO 3166-1" listName="Country">PE</cbc:IdentificationCode>
+          </cac:Country>
+        </cac:RegistrationAddress>
+      </cac:PartyLegalEntity>
+    </cac:Party>
+  </cac:AccountingSupplierParty>
+  <cac:AccountingCustomerParty>
+    <cac:Party>
+      <cac:PartyIdentification>
+        <cbc:ID schemeAgencyName="PE:SUNAT" schemeID="6" schemeName="Documento de Identidad" schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo06">20504794637</cbc:ID>
+      </cac:PartyIdentification>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName><![CDATA[PETROLEOS DEL PERU PETROPERU S.A.]]></cbc:RegistrationName>
+        <cac:RegistrationAddress>
+          <cac:AddressLine>
+            <cbc:Line><![CDATA[AV. ENRIQUE CANAVAL Y MOREYRA 150, SAN ISIDRO]]></cbc:Line>
+          </cac:AddressLine>
+          <cac:Country>
+            <cbc:IdentificationCode listAgencyName="United Nations Economic Commission for Europe" listID="ISO 3166-1" listName="Country">PE</cbc:IdentificationCode>
+          </cac:Country>
+        </cac:RegistrationAddress>
+      </cac:PartyLegalEntity>
+    </cac:Party>
+  </cac:AccountingCustomerParty>
+  <cac:PaymentTerms>
+    <cbc:ID>FormaPago</cbc:ID>
+    <cbc:PaymentMeansID>Contado</cbc:PaymentMeansID>
+  </cac:PaymentTerms>
+  <cac:TaxTotal>
+    <cbc:TaxAmount currencyID="PEN">381.36</cbc:TaxAmount>
+    <cac:TaxSubtotal>
+      <cbc:TaxableAmount currencyID="PEN">2118.64</cbc:TaxableAmount>
+      <cbc:TaxAmount currencyID="PEN">381.36</cbc:TaxAmount>
+      <cac:TaxCategory>
+        <cbc:ID schemeAgencyName="United Nations Economic Commission for Europe" schemeID="UN/ECE 5305" schemeName="Tax Category Identifier">S</cbc:ID>
+        <cbc:Percent>18.00</cbc:Percent>
+        <cbc:TaxExemptionReasonCode listAgencyName="PE:SUNAT" listName="Afectacion del IGV" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo07">10</cbc:TaxExemptionReasonCode>
+        <cac:TaxScheme>
+          <cbc:ID schemeAgencyName="PE:SUNAT" schemeID="UN/ECE 5153" schemeName="Codigo de tributos">1000</cbc:ID>
+          <cbc:Name>IGV</cbc:Name>
+          <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+        </cac:TaxScheme>
+      </cac:TaxCategory>
+    </cac:TaxSubtotal>
+  </cac:TaxTotal>
+  <cac:LegalMonetaryTotal>
+    <cbc:LineExtensionAmount currencyID="PEN">2118.64</cbc:LineExtensionAmount>
+    <cbc:TaxInclusiveAmount currencyID="PEN">2500.00</cbc:TaxInclusiveAmount>
+    <cbc:PayableAmount currencyID="PEN">2500.00</cbc:PayableAmount>
+  </cac:LegalMonetaryTotal>
+  <cac:InvoiceLine>
+    <cbc:ID>1</cbc:ID>
+    <cbc:InvoicedQuantity unitCode="ZZ" unitCodeListAgencyName="United Nations Economic Commission for Europe" unitCodeListID="UN/ECE rec 20">1.00</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="PEN">2118.64</cbc:LineExtensionAmount>
+    <cac:PricingReference>
+      <cac:AlternativeConditionPrice>
+        <cbc:PriceAmount currencyID="PEN">2500.00</cbc:PriceAmount>
+        <cbc:PriceTypeCode listAgencyName="PE:SUNAT" listName="Tipo de Precio" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16">01</cbc:PriceTypeCode>
+      </cac:AlternativeConditionPrice>
+    </cac:PricingReference>
+    <cac:TaxTotal>
+      <cbc:TaxAmount currencyID="PEN">381.36</cbc:TaxAmount>
+      <cac:TaxSubtotal>
+        <cbc:TaxableAmount currencyID="PEN">2118.64</cbc:TaxableAmount>
+        <cbc:TaxAmount currencyID="PEN">381.36</cbc:TaxAmount>
+        <cac:TaxCategory>
+          <cbc:ID schemeAgencyName="United Nations Economic Commission for Europe" schemeID="UN/ECE 5305" schemeName="Tax Category Identifier">S</cbc:ID>
+          <cbc:Percent>18.00</cbc:Percent>
+          <cbc:TaxExemptionReasonCode listAgencyName="PE:SUNAT" listName="Afectacion del IGV" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo07">10</cbc:TaxExemptionReasonCode>
+          <cac:TaxScheme>
+            <cbc:ID schemeAgencyName="PE:SUNAT" schemeID="UN/ECE 5153" schemeName="Codigo de tributos">1000</cbc:ID>
+            <cbc:Name>IGV</cbc:Name>
+            <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+          </cac:TaxScheme>
+        </cac:TaxCategory>
+      </cac:TaxSubtotal>
+    </cac:TaxTotal>
+    <cac:Item>
+      <cbc:Description><![CDATA[pc]]></cbc:Description>
+      <cac:SellersItemIdentification>
+        <cbc:ID>SRV-001</cbc:ID>
+      </cac:SellersItemIdentification>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="PEN">2118.64</cbc:PriceAmount>
+    </cac:Price>
+  </cac:InvoiceLine>
+</Invoice>
